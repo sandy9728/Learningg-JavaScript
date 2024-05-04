@@ -43,3 +43,26 @@ const myFunction = function(){
 
 
 
+// Stack(Primitive data types are used in stack), Heap(Non-primitive data type)
+
+
+
+let foodName = "Mango"
+
+let anotherFood = foodName
+anotherFood = "Watermelon"
+
+console.log(foodName);
+console.log(anotherFood);
+
+
+let userOne = {
+    email : "sandy@gmail.com",
+    Esewa : "letitbex"
+}
+let userTwo = userOne
+
+userTwo.email = "changingit@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
