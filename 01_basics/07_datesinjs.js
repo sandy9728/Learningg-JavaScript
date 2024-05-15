@@ -25,6 +25,7 @@ let newDate = new Date
 console.log(newDate);
 console.log(newDate.getDate());
 console.log(newDate.getMonth());
+console.log(newDate.getTime());
 
 
 console.log(`The date is ${newDate.getDate()} and the month is ${newDate.getMonth()}`);
