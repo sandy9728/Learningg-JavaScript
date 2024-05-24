@@ -45,11 +45,43 @@ const users = [
 ]
 
 users[1].email
-console.log(xUser);
-console.log(Object.keys(xUser));
-console.log(Object.values(xUser));
-console.log(Object.entries(xUser));
+// console.log(xUser);
+// console.log(Object.keys(xUser));
+// console.log(Object.values(xUser));
+// console.log(Object.entries(xUser));
 
-console.log(xUser.hasOwnProperty('isLoggedIn'));
-console.log(xUser.hasOwnProperty('isLogged'));
+// console.log(xUser.hasOwnProperty('isLoggedIn'));
+// console.log(xUser.hasOwnProperty('isLogged'));
 
+
+
+// **** Destructuring ****//
+
+const course = {
+    coursename: "JavaScript",
+    courseprice: "1000",
+    courseinstructor: "xyz"
+}
+
+// course.courseinstructor
+
+const {courseinstructor} = course
+const {courseinstructor: instructor} = course
+// console.log(courseinstructor);
+console.log(instructor);
+
+
+// **** API's ****//
+
+// {
+//     "name": "sandip",
+//     "coursename": "JavaScript",
+//     "Price": "free"
+
+// }
+
+[
+    {},
+    {},
+    {}
+]
