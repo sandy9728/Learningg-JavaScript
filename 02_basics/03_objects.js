@@ -1,3 +1,6 @@
+// **** SIngleton ****//
+
+
 // **** objects literals ****//
 
 
