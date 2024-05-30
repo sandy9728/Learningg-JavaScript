@@ -1,0 +1,71 @@
+<!-- Write a JavaScript program to calculate multiplication 
+     and division of two numbers (input from the user). -->
+
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>program to calculate multiplication or division of two numbers</title>
+        <style>
+            body{ 
+                /* margin: 25px; */
+                /* width: 10px; */
+                /* padding top: 30px; */
+               
+               
+            }
+            .size{
+                width: 200px;
+                height: 20px;
+                padding-top: 5px;
+                margin: 10px;
+               border-radius: 8px;
+               border-width: 2.5px;
+              
+            }
+            .bone{
+                margin-top: 20px;
+                width: 100px;
+                padding: 6px;
+            }
+            .bone2{
+               
+                padding: 6px;
+                width: 100px;
+                margin-left: 30px;
+            }
+            .word{
+                font-family: 'Times New Roman', Times, serif;
+               font-weight:bolder;
+                font-size: large;
+                
+            }
+        </style>
+     </head>
+     <body>
+        <form> 
+            1st Number <input class="size" type="text" id = "FirstNumber"/><br>
+        2nd Number<input class="size" type="text" id ="SecondNumber"><br>
+            <input class="bone" type="button" onclick="multiplyBy()" value="multiply"/>
+            <input class="bone2" type="button" onclick="divideBy()" value="divide"/>
+        </form>       
+        <p class="word">The result is : <br>
+         <span id = "result"></span>
+        </p>
+        <script>
+            function multiplyBy(){
+                num1 = document.getElementById("FirstNumber").value;
+                num2 = document.getElementById("SecondNumber").value;
+                document.getElementById("result").innerHTML = num1 * num2;
+                
+            }
+            function divideBy(){
+                num1 = document.getElementById("FirstNumber").value;
+                num2 = document.getElementById("SecondNumber").value;
+                document.getElementById("result").innerHTML = num1 / num2;
+
+            }
+        </script>
+     </body>
+     </html>
