@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: #fff;">
+    <h2>Some images</h2>
+    <div>
+    <ul id="images">
+        <li><img width="200px" id="Spider-Verse" src="Across The Spider-Verse Wallpaper.jpg" alt="pic"></li>
+        <li><img width="200px" id="totoro" src="download (2).jpg" alt=""></li>
+        <li><img width="200px" id="ghibli" src="download (3).jpg" alt=""></li>
+        <li><img width="200px" id="anya" src="kk.jpg" alt=""></li>
+            <li><a style="color: aqua;" href="https://www.google.com/" id="Google">Google</a></li>
+    </ul>
+</div>
+</body>
+<script>
+    // document.getElementById('anya').onclick = function(){
+    //     alert('This is the picture of Anya  ')
+    // }
+
+       //type, timestamp, defaultPreveted
+    //target, toElement, srcElement, currentTarget,
+    //clientX, clinetY, screenX, screenY   -->interview related
+    //altKey, ctrlKey, shiftKey, keyCode
+
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //    console.log("Clicked on the images");
+    // }, false)
+    // document.getElementById('anya').addEventListener('click', function(e){
+    //    console.log("Clicked on anya image");
+    //    e.stopPropagation()
+    // }, false)
+
+    // document.getElementById('Google').addEventListener('click', function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("google click");
+    // }, false)
+ 
+
+    document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.tagName);
+    if (e.target.tagName === ' IMG') {
+        console.log(e.target.id);
+        let remove = e.target.parentNode
+        remove.remove()
+
+    }
+    // remove.parentNode.removeChild((remove))
+}, false)
+</script>
+</html>
