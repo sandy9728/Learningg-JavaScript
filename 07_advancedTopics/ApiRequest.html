@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* .edit{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    } */
+    .pic{
+        width: 250px;
+        display: flex;
+        align-items: center;
+        height: auto;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+
+    #card{
+        width: 160px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 10px;
+        background: #777234;
+        border-width: 4px;
+        margin-left: 13%;
+    }
+</style>
+<body style=" background-color: #313131; color: #fff;">
+
+    <img class="pic" src="Across The Spider-Verse Wallpaper.jpg" id="picture" alt="picture">
+    <div class="edit">
+<button id="card">Click for data</button>
+</div>
+
+<!-- photo,followers  make a card and while clicking the button it shoud display these data -->
+</body>
+<script>
+
+     document.getElementById('card').addEventListener('click', function() {
+        const requestUrl = 'https://api.github.com/users/sandy9728';
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl);
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText);
+                document.getElementById('picture').src = data.avatar_url;
+                document.getElementById('picture').style.display = 'block';
+                const repoCountElement = document.getElementById('repoCount');
+                if (repoCountElement) {
+                    repoCountElement.innerText = 'Public_Repos: ' + data.public_repos;
+                    repoCountElement.style.display = 'block';
+                } else {
+                    console.error("Element with ID 'repoCount' not found.");
+                }
+            }
+        };
+
+        xhr.send();
+    });
+
+//     const requestUrl = 'https://api.github.com/users/sandy9728'
+//    const xhr = new XMLHttpRequest();
+//    xhr.open('GET', requestUrl)
+
+// xhr.onreadystatechange = function(){
+//     console.log(xhr.readyState);
+
+//     if(xhr.readyState === 4){
+
+//         const data = JSON.parse(this.responseText)
+//         console.log(typeof data);
+//         console.log(data.public_repos);
+//     }
+// }
+//    xhr.send()
+</script>
+</html>
