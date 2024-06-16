@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body style="background-color: #212121;">
+    <button id="board"> keyboard</button>
+    <button id="screen"> acer</button>
+</body>
+
+<script>
+    // function init(){
+    //     let name = "brave"  
+    //     function displayName(){
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+
+    // init();
+
+
+//     function outer () {
+//         let name = 'sandy'
+//         console.log(code);
+//         function inner(){
+//             let code = "1212124"
+//             console.log("inner function", name);
+//         }
+
+
+//         function innerTwo(){
+//             console.log("innerTwo", name);
+//             console.log(code);
+//         }
+//         inner()
+//         innerTwo()
+//     }
+//     outer()
+//     console.log("too outer", name);
+
+//  function makeFunc(){
+//       const name = "operaGX"  
+//         function displayName(){
+//             console.log(name);
+//         }
+//         return displayName();
+//       }  
+
+//     const myFunc = makeFunc();
+//     myFunc();
+
+
+// </script>
+<script>
+document.getElementById("board").onclick = function(){
+    document.body.style.backgroundColor = "beige"
+}
+document.getElementById("screen").onclick = function(){
+    document.body.style.backgroundColor = "purple"
+}
+
+function clickHandler(color) {
+    //  document.body.style.backgroundColor = `${color}`
+
+    return function (){
+        document.body.style.backgroundColor = `${color}`
+    }
+}
+document.getElementById('board').onclick = clickHandler("green")
+document.getElementById('screen').onclick = clickHandler("aqua")
+</script>
+</html>
